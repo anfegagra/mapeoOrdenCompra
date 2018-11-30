@@ -1,0 +1,46 @@
+import { Certificate } from './certificate-model';
+import { Dimension } from './dimension-model';
+import { ItemInstance } from './item-instance-model';
+import { ItemProperty } from './item-property-model';
+import { HazardousItem } from './hazardous-item-model';
+import { CommodityClassification } from './commodity-classification-model';
+import { ItemIdentification } from './item-identification-model';
+import { Address } from './address-model';
+import { Country } from './country-model';
+import { DocumentReference } from './document-reference-model';
+import { TaxCategory } from './tax-category-model';
+import { Party } from './party-model';
+import { transactionConditions } from './transaction-conditions-model';
+
+export class Item {
+    description: string;
+    packQuantity: number;
+    packSizeNumeric: number;
+    catalogueIndicator: Indicator;
+    name: string;
+    hazardousRiskIndicator: Indicator;
+    additionalInformation: string;
+    keyword: string;
+    brandName: string;
+    modelName: string;
+    buyersItemIdentification: ItemIdentification;
+    sellersItemIdentification: ItemIdentification;
+    manufacturersItemIdentification: ItemIdentification;
+    standardItemIdentification: ItemIdentification;
+    catalogueItemIdentification: ItemIdentification;
+    additionalItemIdentification: ItemIdentification;
+    catalogueDocumentReference: DocumentReference;
+    itemSpecificationDocumentReference: DocumentReference;
+    originCountry: Country;
+    commodityClassification: CommodityClassification;
+    transactionConditions: transactionConditions;
+    hazardousItem: HazardousItem;
+    classifiedTaxCategory: TaxCategory;
+    additionalItemProperty: ItemProperty;
+    manufacturerParty: Party;
+    informationContentProviderParty: Party;
+    originAddress: Address;
+    itemInstance: ItemInstance;
+    certificate: Certificate;
+    dimension: Dimension;
+}

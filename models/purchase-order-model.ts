@@ -1,0 +1,45 @@
+import { TaxTotal } from './tax-total-model';
+import { SupplierParty } from './supplier-party-model';
+import { OrderLine } from './order-line-model';
+import { AllowanceCharge } from './allowance-charge-model';
+import { PaymentTerms } from './payment-terms-model';
+import { PaymentMeans } from './payment-means-model';
+import { DeliveryTerms } from './delivery-terms-model';
+import { CustomerParty } from './customer-party-model';
+import { Period } from './period-model';
+import { DocumentReference } from './document-reference-model';
+import { Delivery } from './delivery-model';
+
+export class PurchaseOrder {
+    ublVersionID: string;
+	customizationID: string;
+	profileID: string;
+	profileExecutionID: string;
+	id: string;
+	salesOrderID: string;
+	copyIndicator: Indicatord;
+	uuid: string;
+	issueDate: Date;
+	issueTime: Date;
+	orderTypeCode: number;
+	note: string;
+	requestedInvoiceCurrencyCode: number;
+	documentCurrencyCode: number;
+	pricingCurrencyCode: number;
+	taxCurrencyCode: number;
+	customerReference: string;
+	accountingCostCode: number;
+	accountingCost: string;
+	lineCountNumeric: number;
+	validityPeriod : Period;
+	additionalDocumentReference: DocumentReference;
+	buyerCustomerParty: CustomerParty;
+	sellerSupplierParty: SupplierParty;
+	delivery: Delivery;
+	deliveryTerms: DeliveryTerms;
+	paymentMeans: PaymentMeans;
+	paymentTerms: PaymentTerms;
+	allowanceCharge: AllowanceCharge;
+	taxTotal: TaxTotal;
+	orderLine: OrderLine;
+}
